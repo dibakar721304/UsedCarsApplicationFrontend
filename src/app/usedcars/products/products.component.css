@@ -1,0 +1,31 @@
+.padding-0 {
+  padding-right: 0;
+  padding-left: 1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card.text-center {
+  background-color: antiquewhite;
+  margin: 20px 20px 20px 20px;
+  width: 250px;
+}
+
+.card-body {
+  background-color: antiquewhite;
+}
+.card-header {
+  flex: 1 0 21%;
+  display: inline-block;
+  
+ 
+  flex-grow: 1;
+
+  text-align: left;
+ 
+}
+
+
+

@@ -1,0 +1,15 @@
+.padding-0 {
+  padding-right: 0;
+  padding-left: 1;
+}
+
+
+
+.card-header {
+  display: inline-block;
+  height: 100px;
+  width: 250px;
+  position: absolute;
+  top: 50px;
+  background-color: darkkhaki;
+}

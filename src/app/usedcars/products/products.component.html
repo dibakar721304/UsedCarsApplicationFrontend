@@ -1,0 +1,58 @@
+
+
+<div class="row card-deck">
+  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let order of productOrders">
+    <div class="card text-center">
+      <div class="card-header">
+        <span><b>Car name :</b>{{order.product.make}}</span>
+        <span *ngIf="order.product.licensed; else elseBlock">( Licensed)</span>
+        <ng-template #elseBlock>(Unlicensed)</ng-template>
+        <br />
+        <br />
+        <button id="btn-{{order.product._id}}" (click)=toggle(order.product._id) [disabled]="order.product.licensed == false">
+          show details
+        </button>
+        <ng-container *ngIf="!show && vehicle_id==order.product._id">
+          <br />
+          <span><b>Car model :</b>{{order.product.model}}</span>
+          <br />
+          <span><b>Car price :$</b>{{order.product.price}}</span>
+          <br />
+          <span><b>Model Year:</b>{{order.product.year_model}}</span>
+          <br />
+          <span><b>Add date :</b>{{order.product.date_added}}</span>
+          <br />
+          <span><b>Warehouse name :</b>{{order.product.warehouse_name}}</span>
+          <br />
+          <span><b>Warehouse latitude :</b>{{order.product.warehouse_latitude}}</span>
+          <br />
+          <span><b>Warehouse longitude :</b>{{order.product.warehouse_longitude}}</span>
+          <br />
+        </ng-container>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div class="card-body">
+       QTY
+        
+        <div class="col-4 padding-0" *ngIf="!isProductSelected(order.product)">
+          <input type="number" min="0" class="form-control" [(ngModel)]=order.quantity>
+        </div>
+        <div class="col-4 padding-0" *ngIf="!isProductSelected(order.product)">
+          <button class="btn btn-primary" (click)="addToCart(order)"
+                  [disabled]="order.quantity <= 0">
+            Add To Cart
+          </button>
+        </div>
+        <div class="col-12" *ngIf="isProductSelected(order.product)">
+          <button class="btn btn-primary btn-block"
+                  (click)="removeFromCart(order)">
+            Remove From Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

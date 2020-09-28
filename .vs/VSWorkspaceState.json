@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\usedcars",
+    "\\src\\app\\usedcars\\models",
+    "\\src\\app\\usedcars\\orders",
+    "\\src\\app\\usedcars\\products",
+    "\\src\\app\\usedcars\\services",
+    "\\src\\app\\usedcars\\shopping-cart"
+  ],
+  "PreviewInSolutionExplorer": false
+}
